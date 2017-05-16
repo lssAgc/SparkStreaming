@@ -259,8 +259,6 @@ object UpdateKafkaTransTotalCountStreaming {
       if (rdd.count() == 0)
         inserToSqlBy0(sql, calPeriod)
 
-
-
       rdd.foreachPartition(iter => {
         var count = 0
         // 获取数据库配置
